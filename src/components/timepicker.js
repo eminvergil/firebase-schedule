@@ -4,12 +4,16 @@ import TextField from "@mui/material/TextField";
 import DateTimePicker from "@mui/lab/DateTimePicker";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import Stack from "@mui/material/Stack";
+import { useSnapshot } from "valtio";
+import { state } from "../state/context";
 
 export default function TimePicker() {
-  const [value, setValue] = useState(new Date("2014-08-18T21:11:54"));
+  const snap = useSnapshot(state);
+  const [value, setValue] = useState(snap.date);
 
   const handleChange = (newValue) => {
     setValue(newValue);
+    state.date = newValue;
   };
 
   return (
