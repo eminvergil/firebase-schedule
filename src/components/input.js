@@ -5,7 +5,6 @@ import { ScheduleTime } from "./schedule";
 
 export function Input() {
   const snap = useSnapshot(state);
-
   const [input, setInput] = useState(snap.input);
 
   function handleSubmit(e) {
