@@ -5,8 +5,8 @@ import { ScheduleTime } from "./components/schedule";
 
 export function App() {
   return (
-    <div className="bg-black p-16 text-white w-full min-h-screen">
-      <p>hello world 2</p>
+    <div className="p-16 w-full min-h-screen bg-green-200 justify-center flex flex-col mx-auto text-center max-w-4xl">
+      <p>Schedule your tweet with this application</p>
       <Input />
       <ScheduleTime />
     </div>
